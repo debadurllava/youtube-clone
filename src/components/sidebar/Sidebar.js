@@ -12,6 +12,7 @@ import {
 import './_sidebar.scss'
 import { useDispatch } from 'react-redux'
 import { log_out } from '../../redux/actions/auth.action'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Sidebar = ({sidebar, handleToggleSidebar}) => {
 const dispatch = useDispatch();
@@ -25,10 +26,14 @@ const dispatch = useDispatch();
         <MdHome size={23} />
         <span>Home</span>
       </li>
+
+      <Link to='/feed/subscriptions'>
       <li>
         <MdSubscriptions size={23} />
-        <span>SubScriptins</span>
+        <span>SubScriptions</span>
       </li>
+      </Link>
+      
       <li>
         <MdThumbUp size={23} />
         <span>Liked Video</span>
